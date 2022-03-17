@@ -1,3 +1,5 @@
+import React from "react";
+
 const Card = ({ detail }) => {
     return(
         <div className="planet-container">
