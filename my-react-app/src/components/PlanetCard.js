@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Card from "./Card"
 
 const Cards = () => {
   const [details, setDetails] = useState([]);
@@ -12,22 +13,13 @@ const Cards = () => {
     });
   }, []);
 
-  //Mapping properties from API to their DIVS
+  //Mappinconst Cg properties from API to their DIVS
   return (
     <div className="layout">
       {details.map((detail, i) => (
-        <div key={i} className="planet-container">
-          <div className="img-container">
-            <img src={require(`../images/${detail.name}.jpg`)} alt="planets" />
-          </div>
-
-          <div className="planet-details">
-            <p>Name: {detail.name}</p>
-            <p>Gravity: {detail.gravity}</p>
-            <p>Climate: {detail.climate}</p>
-            <p>Surface Water: {detail.surface_water}</p>
-          </div>
-        </div>
+        return (
+          <Card key={i} detail={detail}/>
+        )
       ))}
     </div>
   );
