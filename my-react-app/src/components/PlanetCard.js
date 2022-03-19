@@ -13,15 +13,13 @@ const Cards = () => {
     });
   }, []);
 
-  //Mappinconst Cg properties from API to their DIVS
+  //Mapping properties from API to the Card component
   return (
     <div className="layout">
       {details.map((detail, i) => (
-        return (
           <Card key={i} detail={detail}/>
-        )
       ))}
     </div>
-  );
+  )
 };
 export default Cards;
